@@ -1,0 +1,126 @@
+:root {
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-border: #f1f5f9;
+    --shadow-soft: 0 2px 8px rgba(15, 23, 42, 0.04);
+    --shadow-hover: 0 10px 24px rgba(15, 23, 42, 0.08);
+    --brand-primary: #2563eb;
+}
+
+/* Interactive Link Cards */
+.space-y-3 > a {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-color: var(--card-border);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.space-y-3 > a:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.space-y-3 > a:active {
+    transform: translateY(0) scale(0.99);
+}
+
+/* Icon Box & Icon Enlarge on Hover */
+.space-y-3 > a .w-10 {
+    transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.space-y-3 > a .w-10 i {
+    transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.space-y-3 > a:hover .w-10 {
+    transform: scale(1.15);
+    color: #ffffff !important;
+}
+
+.space-y-3 > a:hover .w-10 i {
+    transform: scale(1.2);
+}
+
+/* Brand-Matched Background Color Changes on Hover */
+
+/* WhatsApp (Green) */
+.space-y-3 > a:has(.fa-whatsapp):hover {
+    background-color: #f0fdf4 !important;
+    border-color: #bbf7d0 !important;
+}
+.space-y-3 > a:has(.fa-whatsapp):hover .w-10 {
+    background-color: #16a34a !important;
+    box-shadow: 0 6px 14px rgba(22, 163, 74, 0.35);
+}
+
+/* Google Maps (Red) */
+.space-y-3 > a:has(.fa-location-dot):hover {
+    background-color: #fef2f2 !important;
+    border-color: #fecaca !important;
+}
+.space-y-3 > a:has(.fa-location-dot):hover .w-10 {
+    background-color: #ef4444 !important;
+    box-shadow: 0 6px 14px rgba(239, 68, 68, 0.35);
+}
+
+/* Facebook (Blue) */
+.space-y-3 > a:has(.fa-facebook):hover {
+    background-color: #eff6ff !important;
+    border-color: #bfdbfe !important;
+}
+.space-y-3 > a:has(.fa-facebook):hover .w-10 {
+    background-color: #2563eb !important;
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
+}
+
+/* Instagram (Pink/Gradient) */
+.space-y-3 > a:has(.fa-instagram):hover {
+    background-color: #fdf2f8 !important;
+    border-color: #fbcfe8 !important;
+}
+.space-y-3 > a:has(.fa-instagram):hover .w-10 {
+    background: linear-gradient(135deg, #f59e0b, #ec4899, #8b5cf6) !important;
+    box-shadow: 0 6px 14px rgba(236, 72, 153, 0.35);
+}
+
+/* YouTube (Red) */
+.space-y-3 > a:has(.fa-youtube):hover {
+    background-color: #fef2f2 !important;
+    border-color: #fecaca !important;
+}
+.space-y-3 > a:has(.fa-youtube):hover .w-10 {
+    background-color: #dc2626 !important;
+    box-shadow: 0 6px 14px rgba(220, 38, 38, 0.35);
+}
+
+/* TikTok (Dark/Black) */
+.space-y-3 > a:has(.fa-tiktok):hover {
+    background-color: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+}
+.space-y-3 > a:has(.fa-tiktok):hover .w-10 {
+    background-color: #0f172a !important;
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.35);
+}
+
+/* Email (Amber) */
+.space-y-3 > a:has(.fa-envelope):hover {
+    background-color: #fffbeb !important;
+    border-color: #fde68a !important;
+}
+.space-y-3 > a:has(.fa-envelope):hover .w-10 {
+    background-color: #d97706 !important;
+    box-shadow: 0 6px 14px rgba(217, 119, 6, 0.35);
+}
+
+/* Chevron Arrow Slide */
+.space-y-3 > a .fa-chevron-right {
+    transition: transform 0.22s ease, color 0.22s ease;
+}
+
+.space-y-3 > a:hover .fa-chevron-right {
+    transform: translateX(4px);
+    color: var(--brand-primary);
+}
